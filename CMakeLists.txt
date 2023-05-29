@@ -27,5 +27,5 @@ __add_real_target(admesh lib SOURCE ${SRCS}
 							)
 							
 if(CC_INSTALL_ADMESH)
-	__install_directory_specif(${CMAKE_CURRENT_SOURCE_DIR}/include/ admesh)
+	__install_directory_specif(${CMAKE_CURRENT_SOURCE_DIR}/ admesh)
 endif()
