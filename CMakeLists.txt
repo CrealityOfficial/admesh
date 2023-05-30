@@ -17,15 +17,20 @@ set(INCS    stl.h
 			)
 			
 			
-#__add_common_library(admesh)
-__add_real_target(admesh lib SOURCE ${SRCS} 
-							INC ${INCS} 
-							LIB ${ILIBS}
-							DEF ${DEFS}
-							#INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}
-							#OPENMP
-							)
-							
+if(BUILD_ADMESH_STATIC)
+	__add_real_target(admesh lib SOURCE ${SRCS} 
+								INC ${INCS} 
+								LIB ${ILIBS}
+								DEF ${DEFS}
+								)
+else()
+	__add_real_target(admesh dll SOURCE ${SRCS} 
+								INC ${INCS} 
+								LIB ${ILIBS}
+								DEF ${DEFS}
+								)
+endif()			
+				
 if(CC_INSTALL_ADMESH)
 	__install_directory_specif(${CMAKE_CURRENT_SOURCE_DIR}/ admesh)
 endif()
