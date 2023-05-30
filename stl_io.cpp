@@ -23,7 +23,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include <boost/log/trivial.hpp>
+//#include <boost/log/trivial.hpp>
+#include "ccglobal/log.h"
 #include <boost/nowide/cstdio.hpp>
 #include <boost/predef/other/endian.h>
 
@@ -71,7 +72,9 @@ bool stl_write_ascii(stl_file *stl, const char *file, const char *label)
 {
 	FILE *fp = boost::nowide::fopen(file, "w");
   	if (fp == nullptr) {
-		BOOST_LOG_TRIVIAL(error) << "stl_write_ascii: Couldn't open " << file << " for writing";
+		//BOOST_LOG_TRIVIAL(error) << "stl_write_ascii: Couldn't open " << file << " for writing";
+		LOGE("stl_write_ascii: Couldn't open");
+		LOGE("for writing");
     	return false;
   	}
 
@@ -96,7 +99,9 @@ bool stl_print_neighbors(stl_file *stl, char *file)
 {
 	FILE *fp = boost::nowide::fopen(file, "w");
 	if (fp == nullptr) {
-		BOOST_LOG_TRIVIAL(error) << "stl_print_neighbors: Couldn't open " << file << " for writing";
+		//BOOST_LOG_TRIVIAL(error) << "stl_print_neighbors: Couldn't open " << file << " for writing";
+		LOGE("stl_print_neighbors: Couldn't open  ");
+		LOGE("for writing ");
     	return false;
   	}
 
@@ -129,7 +134,8 @@ bool stl_write_binary(stl_file *stl, const char *file, const char *label)
 {
 	FILE *fp = boost::nowide::fopen(file, "wb");
 	if (fp == nullptr) {
-		BOOST_LOG_TRIVIAL(error) << "stl_write_binary: Couldn't open " << file << " for writing";
+		//BOOST_LOG_TRIVIAL(error) << "stl_write_binary: Couldn't open " << file << " for writing";
+		LOGE("stl_write_binary: Couldn t open ");
     	return false;
   	}
 
@@ -199,7 +205,8 @@ bool stl_write_quad_object(stl_file *stl, char *file)
 
 	FILE *fp = boost::nowide::fopen(file, "w");
 	if (fp == nullptr) {
-		BOOST_LOG_TRIVIAL(error) << "stl_write_quad_object: Couldn't open " << file << " for writing";
+		//BOOST_LOG_TRIVIAL(error) << "stl_write_quad_object: Couldn't open " << file << " for writing";
+		LOGE("stl_write_quad_object: Couldn't open");
 		return false;
 	}
 
@@ -225,7 +232,8 @@ bool stl_write_dxf(stl_file *stl, const char *file, char *label)
 {
 	FILE *fp = boost::nowide::fopen(file, "w");
 	if (fp == nullptr) {
-		BOOST_LOG_TRIVIAL(error) << "stl_write_quad_object: Couldn't open " << file << " for writing";
+		//BOOST_LOG_TRIVIAL(error) << "stl_write_quad_object: Couldn't open " << file << " for writing";
+		LOGE("stl_write_quad_object: Couldn't open");
     	return false;
   	}
 
