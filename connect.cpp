@@ -537,10 +537,8 @@ void stl_remove_unconnected_facets(stl_file *stl)
 			    	int &other_face_idx = stl->neighbors_start[neighbors.neighbor[i]].neighbor[(neighbors.which_vertex_not[i] + 1) % 3];
 			  		if (other_face_idx != stl->stats.number_of_facets) {
 			  			//BOOST_LOG_TRIVIAL(info) << "in remove_facet: neighbor = " << other_face_idx << " numfacets = " << stl->stats.number_of_facets << " this is wrong";
-						LOGE("in remove_facet: neighbor = ");
-						LOGLEVEL(other_face_idx);
-						LOGE(" numfacets = ");
-						LOGLEVEL(stl->stats.number_of_facets);
+						LOGE("in remove_facet: neighbor ={ %d }  ", other_face_idx);
+						LOGE(" numfacets ={ %d }  ", stl->stats.number_of_facets);
 						LOGE(" this is wrong");
 						return;
 			  		}

@@ -1,8 +1,6 @@
-__cc_find(Boost)
 __cc_find(Eigen)
 
-set(ILIBS eigen boost_system boost_filesystem boost_iostreams boost_log)
-set(DEFS BOOST_ALL_NO_LIB)
+set(ILIBS eigen )
 set(SRCS    connect.cpp
 			normals.cpp
 			shared.cpp
@@ -13,7 +11,6 @@ set(SRCS    connect.cpp
 			
 set(INCS    stl.h
 			${eigen_INCLUDE_DIRS}
-			${BOOST_INCLUDE_DIRS}
 			)
 			
 			

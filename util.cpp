@@ -59,15 +59,9 @@ void stl_verify_neighbors(stl_file *stl)
 			if (edge_a.p1 != edge_b.p1 || edge_a.p2 != edge_b.p2) {
 				// These edges should match but they don't.  Print results.
 				//BOOST_LOG_TRIVIAL(info) << "edge " << j << " of facet " << i << " doesn't match edge " << (vnot + 1) << " of facet " << neighbor;
-				LOGE("edge ");
-				LOGLEVEL(j);
-				LOGE("of facet  ");
-				LOGLEVEL(i);
-				LOGE(" doesn't match edge  ");
-				LOGLEVEL((vnot + 1));
-				LOGE("of facet  ");
-				LOGLEVEL(neighbor);
-
+				LOGE("edge{ %d }  ",j);
+				LOGE( " of facet{ %d }  ", i);
+				LOGE(" doesn't match edge { %d } ", (vnot + 1));
 				stl_write_facet(stl, (char*)"first facet", i);
 				stl_write_facet(stl, (char*)"second facet", neighbor);
 			}
