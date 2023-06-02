@@ -20,6 +20,7 @@ __add_real_target(admesh lib SOURCE ${SRCS}
 								INC ${INCS} 
 								LIB ${ILIBS}
 								DEF ${DEFS}
+								INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}
 								)		
 				
 if(CC_INSTALL_ADMESH)
