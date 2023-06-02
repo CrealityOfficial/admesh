@@ -24,10 +24,12 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
-#include <corecrt_math_defines.h>
+//#include <corecrt_math_defines.h>
 //#include <boost/log/trivial.hpp>
 #include "ccglobal/log.h"
 #include "stl.h"
+
+#define M_PI 3.14159265
 
 void stl_verify_neighbors(stl_file *stl)
 {
