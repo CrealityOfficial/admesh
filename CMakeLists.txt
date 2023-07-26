@@ -2,7 +2,7 @@ __cc_find(Boost)
 __cc_find(Eigen)
 
 set(ILIBS eigen boost_system boost_filesystem boost_iostreams )
-set(DEFS BOOST_ALL_NO_LIB)
+set(DEFS BOOST_ALL_NO_LIB BOOST_ALL_DYN_LINK)
 set(SRCS    connect.cpp
 			normals.cpp
 			shared.cpp
