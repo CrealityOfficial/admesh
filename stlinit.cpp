@@ -26,14 +26,8 @@
 #include <math.h>
 #include <assert.h>
 #include <iostream>
-//#include <boost/log/trivial.hpp>
-//#include <boost/nowide/cstdio.hpp>
-//#include <boost/predef/other/endian.h>
 
 #include "stl.h"
-//#include "libslic3r/Format/STL.hpp"
-
-//#include "libslic3r/LocalesUtils.hpp"
 
 #ifndef SEEK_SET
 #error "SEEK_SET not defined"

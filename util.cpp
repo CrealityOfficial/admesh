@@ -24,8 +24,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
-//#include <corecrt_math_defines.h>
-//#include <boost/log/trivial.hpp>
 #include "ccglobal/log.h"
 #include "stl.h"
 

@@ -24,13 +24,9 @@
 #include <string.h>
 
 #include <vector>
-
-#include <boost/log/trivial.hpp>
 #include <boost/nowide/cstdio.hpp>
 
 #include "stl.h"
-
-//#include "libslic3r/LocalesUtils.hpp"
 
 void stl_generate_shared_vertices(stl_file *stl, indexed_triangle_set &its)
 {

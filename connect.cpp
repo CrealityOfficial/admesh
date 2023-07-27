@@ -29,7 +29,6 @@
 #include <vector>
 
 #include <boost/predef/other/endian.h>
-//#include <boost/log/trivial.hpp>
 #include "ccglobal/log.h"
 // Boost pool: Don't use mutexes to synchronize memory allocation.
 #define BOOST_POOL_NO_MT

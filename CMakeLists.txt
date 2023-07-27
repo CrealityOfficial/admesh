@@ -1,7 +1,8 @@
 __cc_find(Boost)
 __cc_find(Eigen)
 
-set(ILIBS eigen boost_system boost_filesystem boost_iostreams )
+set(LIBS boost_system boost_filesystem boost_iostreams)
+set(ILIBS eigen)
 set(DEFS BOOST_ALL_NO_LIB BOOST_ALL_DYN_LINK)
 set(SRCS    connect.cpp
 			normals.cpp
@@ -18,7 +19,8 @@ set(INCS    stl.h
 			
 __add_real_target(admesh lib SOURCE ${SRCS} 
 								INC ${INCS} 
-								LIB ${ILIBS}
+								LIB ${LIBS}
+								ILIB ${ILIBS}
 								DEF ${DEFS}
 								INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}
 								)		
