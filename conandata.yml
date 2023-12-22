@@ -5,5 +5,5 @@ repository: http://172.20.180.12:8050/yanfa4/third/admesh
 external_repository: https://github.com/CrealityOfficial/admesh
 description: admesh
 topics: admesh
-build_deps: 
-search_deps: 
+build_deps: boost_static/1.0.0,eigen/0.0.2
+search_deps: eigen/0.0.2
